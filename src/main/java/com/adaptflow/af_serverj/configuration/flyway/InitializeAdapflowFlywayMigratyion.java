@@ -19,6 +19,7 @@ public class InitializeAdapflowFlywayMigratyion {
         return Flyway.configure()
                 .dataSource(adaptflowDataSource)
                 .baselineOnMigrate(true)
+                .baselineVersion("17")
                 .locations("classpath:/flyway/scripts/adaptflow")
                 .load();
     }
